@@ -3,7 +3,7 @@
 include("./../back/LangController.php");
 
 if (isset($_GET['lang'])) $lang = $_GET['lang'];
-else $lang = 'en';
+else $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 
 switch ($lang){
     case 'en' : { $path = 'D:\Labs\Semester4\WT\Laba8\ini-files\bronx\bronxEn.ini' ; break;}
